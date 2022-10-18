@@ -398,6 +398,10 @@ img {
 .clients.list {
   display: flex;
 }
+.clients.card {
+  width: calc((100% - 150px) / 6);
+  height: 92px;
+}
 .clients .card + .card {
   margin-left: 30px;
 }
@@ -406,15 +410,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 92px;
+  /* width: 100%; */
+  height: 100%;
   border: 1px solid var(--icons-color);
   border-radius: 4px;
   fill: var(--icons-color);
 }
 .clients svg {
   width: 106px;
-  height: 60px;
+  /* height: 60px; */
 }
 .icons.link:hover,
 .icons.link:focus {
@@ -454,7 +458,8 @@ footer {
   color: var(--accent-color);
 }
 
-footer .social-title {
+.social-title,
+.send-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -480,6 +485,9 @@ footer .social.link:hover {
 }
 .social-block {
   margin-left: 70px;
+}
+.send-block {
+  margin-left: 93px;
 }
 /*------------------Portfolio page-------------- */
 /* -----------Filter buttons---------- */
