@@ -254,7 +254,7 @@ img {
   background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.modal button {
+.modal button[data-modal-close] {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -262,6 +262,37 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--background-color);
+}
+.form {
+  padding: 0 40px;
+  margin-top: 12px;
+}
+.form-text {
+  padding: 40px 40px 0 40px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.form-label {
+}
+.form-input {
+  padding: 11px 12px;
+  margin-top: 4px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-input:focus {
+  border: 1px solid var(--accent-color);
 }
 /* ---------------Benefits------------- */
 .benefits.list {
@@ -433,6 +464,7 @@ footer {
 }
 .footer.container {
   display: flex;
+  align-items: baseline;
 }
 .footer .item {
   margin-top: 9px;
@@ -464,7 +496,7 @@ footer {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  margin: 12px 0 20px 0;
+  margin-bottom: 20px;
   text-transform: uppercase;
   color: var(--second-accent-color);
 }
@@ -472,6 +504,7 @@ footer .icons.list {
   min-width: 206px;
   display: flex;
   padding: 0;
+  margin-top: 0;
   justify-content: space-between;
 }
 footer .social.link {
