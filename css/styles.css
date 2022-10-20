@@ -251,10 +251,12 @@ img {
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
+  z-index: 20;
   background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .modal button[data-modal-close] {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   position: absolute;
   padding: 5px;
@@ -318,9 +320,6 @@ img {
 .form-field textarea:focus {
   border: 1px solid var(--accent-color);
 }
-/* .form-field:focus-within .modal-icon {
-  fill: var(--accent-color);
-} */
 .form-input:focus + .modal-icon {
   fill: var(--accent-color);
 }
@@ -336,6 +335,43 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+}
+.check-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+}
+.checkbox:checked + .custom-check {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.form-checkbox {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}
+.agree.link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
 }
 .submit-btn {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -429,7 +465,7 @@ img {
 .activities-photo.item:hover {
   transform: scale(1.15);
 }
-/* ----------------Our team--------------------- */
+/* -------------Our team------------ */
 .team .list {
   display: flex;
 }
@@ -589,7 +625,6 @@ footer .social.link:hover {
   margin-left: 93px;
 }
 .send-block button {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
   min-width: 200px;
   min-height: 50px;

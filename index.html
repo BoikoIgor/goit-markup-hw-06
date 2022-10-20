@@ -55,7 +55,7 @@
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <p class="form-text">Залиште свої дані, ми вам передзвонимо</p>
-            <form action="" class="form">
+            <form class="form">
               <div class="form-field">
                 <label for="name" class="form-label">Ім'я</label>
                 <input type="text" class="form-input" name="name" id="name" autofocus />
@@ -86,7 +86,18 @@
                 <label for="comment" class="form-label">Коментар</label>
                 <textarea name="comment" id="comment" rows="6" placeholder="Введіть текст"></textarea>
               </div>
-              <label> <input type="checkbox" name="agree-check" />Погоджуюся з розсилкою та приймаю <a class="agree link" href="">Умови договору</a> </label>
+              <div class="form-checkbox">
+                <label class="check-label">
+                  <input class="checkbox visually-hidden" type="checkbox" name="checkbox" />
+                  <span class="custom-check">
+                    <!-- <svg class="icon-check" width="16" height="15">
+                      <use href="./images/sprite.svg#icon-check"></use>
+                    </svg> -->
+                  </span>
+                  Погоджуюся з розсилкою та приймаю &nbsp
+                  <a class="agree link" href="">Умови договору</a>
+                </label>
+              </div>
             </form>
             <button type="submit" class="submit-btn">Відправити</button>
             <button data-modal-close>
